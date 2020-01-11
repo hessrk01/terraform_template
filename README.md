@@ -39,3 +39,6 @@ https://www.terraform.io/docs/backends/index.html
 aws configure --profile terraform # you can put anything here other besides terraform, this is just the name of the profile I created.
 
 terraform explains using shared credentials - https://www.terraform.io/docs/providers/aws/index.html#shared-credentials-file
+
+## Initial Remote State
+An initial state needs to be created. Not using TerraGrunt...can't keep DRY. First *cd initial_remote_state* and *terraform init* Thus creating DynamoDB table and S3 Bucket for state.
