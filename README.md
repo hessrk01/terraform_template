@@ -32,7 +32,7 @@ https://www.terraform.io/docs/backends/index.html
 aws configure --profile terraform
 
 terraform explains using shared credentials - https://www.terraform.io/docs/providers/aws/index.html#shared-credentials-file
-reddit explains more - https://www.reddit.com/r/Terraform/comments/disjaf/terraform_not_finding_aws_credentials_file/
+
 
 
 
