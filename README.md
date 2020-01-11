@@ -26,3 +26,14 @@ https://www.terraform.io/docs/backends/index.html
 
 1. S3 bucket - for state file
 1. Database - for locking of state
+
+## AWS Configure
+#### Terraform backeds loaded before vars loaded. Terraform can read from ~/.aws/credentials
+aws configure --profile terraform
+
+terraform explains using shared credentials - https://www.terraform.io/docs/providers/aws/index.html#shared-credentials-file
+reddit explains more - https://www.reddit.com/r/Terraform/comments/disjaf/terraform_not_finding_aws_credentials_file/
+
+
+
+
