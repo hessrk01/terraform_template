@@ -1,6 +1,13 @@
 
 # Terraform template
 
+A template for backending terraform state files to S3 buckets and a lock status in a DynamoDB table
+
+Backend.tf files are loaded before var files...so you must define state bucket, and dynamodb beforehand. 
+
+vars auto loaded because terraform.tfvars file is autoloaded. Any files with names ending in .auto.tfvars or .auto.tfvars.json would also be autoloaded
+https://www.terraform.io/docs/configuration/variables.html 
+
 ## Download Terraform
 https://askubuntu.com/questions/983351/how-to-install-terraform-in-ubuntu
 
@@ -28,12 +35,7 @@ https://www.terraform.io/docs/backends/index.html
 1. Database - for locking of state
 
 ## AWS Configure
-#### Terraform backeds loaded before vars loaded. Terraform can read from ~/.aws/credentials
-aws configure --profile terraform
+#### Terraform backends loaded before vars loaded. Terraform can read from ~/.aws/credentials
+aws configure --profile terraform # you can put anything here other besides terraform, this is just the name of the profile I created.
 
 terraform explains using shared credentials - https://www.terraform.io/docs/providers/aws/index.html#shared-credentials-file
-
-
-
-
-
